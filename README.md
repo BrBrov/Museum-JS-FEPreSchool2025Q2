@@ -1,6 +1,9 @@
 # Museum-JS-FEPreSchool2025Q2
 JS/FE Pre-School 2025Q2 task Museum
 
+### Описание задания:
+### [https://github.com/rolling-scopes-school/tasks/blob/master/stage0/README.md](https://github.com/rolling-scopes-school/tasks/blob/master/stage0/README.md)
+
 ### ***Макет figma:***
 ### ***[https://www.figma.com/design/xkP6mIaq7uG1Uru7CpasXq/Museum-04.09?node-id=0-1&p=f&t=I3GbHVL722WVrsme-0](https://www.figma.com/design/xkP6mIaq7uG1Uru7CpasXq/Museum-04.09?node-id=0-1&p=f&t=I3GbHVL722WVrsme-0)***
 
