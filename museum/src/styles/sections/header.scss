@@ -1,0 +1,39 @@
+@use '../generals/variables.scss';
+@use '../generals/colors.scss';
+@use '../generals/fonts.scss';
+
+.header {
+  display: flex;
+  width: variables.$general-width-sections;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  background-color: colors.$bg-dark;
+
+  &__container {
+    display: flex;
+    width: variables.$general-width-content-sections;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex;
+    width: 199px;
+    height: 33px;
+    justify-content: space-between;
+  }
+
+  &__logo-img {
+    width: 49px;
+    height: 26px;
+  }
+
+  &__logo-title {
+    @include fonts.fontForum;
+    font-weight: 400;
+    font-size: 28px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+}

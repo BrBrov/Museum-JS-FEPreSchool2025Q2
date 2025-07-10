@@ -1,0 +1,17 @@
+@mixin bigButton {
+  border-radius: 10px;
+  background: #710707;
+
+  &:hover {
+    background: #9d8665;
+  }
+}
+
+@mixin smallButton {
+  border-radius: 2px;
+  background: #000;
+
+  &:hover {
+    background: #9d8665;
+  }
+}

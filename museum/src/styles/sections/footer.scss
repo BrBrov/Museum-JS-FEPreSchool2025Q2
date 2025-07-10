@@ -1,0 +1,8 @@
+@use '../generals/variables.scss';
+@use '../generals/colors.scss';
+
+.footer {
+  width: variables.$general-width-sections;
+  height: 392px;
+  background: colors.$bg-dark;
+}

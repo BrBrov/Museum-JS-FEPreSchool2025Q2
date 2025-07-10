@@ -1,0 +1,32 @@
+@use '../generals/variables.scss';
+@use './welcome.scss';
+@use './visiting.scss';
+@use './explore.scss';
+@use './video.scss';
+@use './gallery.scss';
+@use './tickets.scss';
+@use './contacts.scss';
+
+.main {
+  display: flex;
+  width: 100%;
+  height: 8792px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome,
+.visiting,
+.explore,
+.video,
+.gallery,
+.tickets,
+.contacts,
+.paralax {
+  width: variables.$general-width-sections;
+}
+
+.paralax {
+  height: 400px;
+  background: transparent;
+}
