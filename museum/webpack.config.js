@@ -23,7 +23,7 @@ const defaultConfig = {
     rules: [
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
+        type: 'asset/resource'
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
@@ -34,14 +34,14 @@ const defaultConfig = {
   plugins: [
     new HtmlWebpackPlugin({
       favicon: './src/assets/favicon.ico',
-      template: './src/index.html'
+      template: './src/index.html',
     })
   ]
 };
 
 function createConfig(mode = true) {
   if (mode) return merge(defaultConfig, devConfig);
-  if (!mode) return merge(defaultConfig, prodConfig);
+  return merge(defaultConfig, prodConfig);
 }
 
 export default createConfig(isMode);

@@ -4,13 +4,15 @@ import Webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
 
 import webpackConfig from './webpack.config.js';
+import { debug } from 'console';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const configDevServer = {
     static: {
-      directory: path.join(__dirname, 'src/assets')
+      directory: path.join(__dirname, 'src'),
+      publicPath: '/',
     },
     compress: false,
     port: 3000,
