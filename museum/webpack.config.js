@@ -23,20 +23,28 @@ const defaultConfig = {
     rules: [
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource'
+        type: 'asset/resource',
+        generator: {
+          filename: '[name][ext]'
+        }
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: 'asset/resource',
+        type: 'asset/resource'
       },
     ]
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      favicon: './src/assets/favicon.ico',
-      template: './src/index.html',
-    })
-  ]
+plugins: [
+  new HtmlWebpackPlugin({
+    favicon: './src/assets/favicon.ico',
+    template: './src/index.html',
+  })
+],
+  performance: {
+  hints: false,
+    maxAssetSize: 500000, // 500 KiB
+      maxEntrypointSize: 500000, // 500 KiB
+  },
 };
 
 function createConfig(mode = true) {

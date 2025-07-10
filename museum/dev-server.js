@@ -11,8 +11,8 @@ const __dirname = path.dirname(__filename);
 
 const configDevServer = {
     static: {
-      directory: path.join(__dirname, 'src'),
-      publicPath: '/',
+      directory: path.join(__dirname, 'src/assets'),
+      publicPath: '/assets/',
     },
     compress: false,
     port: 3000,
