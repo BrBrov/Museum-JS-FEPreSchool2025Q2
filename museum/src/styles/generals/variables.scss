@@ -3,3 +3,23 @@ $general-width-sections: 100%;
 
 //sections width general variable
 $general-width-content-sections: clamp(480px, 100%, 1440px);
+
+//text variables
+$letter-spacing-xs: 0.06em;
+$letter-spacing-s: 0.07em;
+$letter-spacing-sm: 0.09em;
+$letter-spacing-m: 0.16em;
+$letter-spacing-l: 0.18em;
+
+$text-transform-uppercase: uppercase;
+
+$font-weight-s: 100;
+$font-weight-sm: 200;
+$font-weight-xm: 300;
+$font-weight-m: 400;
+$font-weight-lm: 500;
+$font-weight-l: 700;
+
+$font-height-s: 112%;
+$font-height-m: 175%;
+$font-height-l: 214%;
