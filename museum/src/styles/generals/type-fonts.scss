@@ -17,7 +17,7 @@
   font-weight: variables.$font-weight-m;
   font-size: 32px;
   letter-spacing: variables.$letter-spacing-m;
-  text-transform: uppercase;
+  text-transform: variables.$text-transform-uppercase;
   color: colors.$dark-color-link;
 }
 
@@ -32,12 +32,12 @@
   }
 }
 
-@mixin middleTextForum() {
+@mixin middleTextForum {
   @include fonts.fontForum;
   font-weight: variables.$font-weight-m;
   font-size: 28px;
   letter-spacing: variables.$letter-spacing-l;
-  text-transform: uppercase;
+  text-transform: variables.$text-transform-uppercase;
   color: colors.$bg-light;
 }
 

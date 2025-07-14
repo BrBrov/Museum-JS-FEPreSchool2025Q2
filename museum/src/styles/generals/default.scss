@@ -1,5 +1,10 @@
-html, body {
-  font-size: 32px;
+@use './colors.scss';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -9,3 +14,25 @@ h4 {
   margin: 0;
 }
 
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    font-size: 24px;
+    color: colors.$hover-color-link;
+    transition: all 0.2s linear;
+  }
+
+  &:active {
+    font-size: 20px;
+    color: colors.$hover-color-link;
+    transition: font-size 0.1s linear;
+  }
+}

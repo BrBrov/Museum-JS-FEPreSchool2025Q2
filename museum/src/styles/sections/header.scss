@@ -1,6 +1,7 @@
 @use '../generals/variables.scss';
 @use '../generals/colors.scss';
 @use '../generals/fonts.scss';
+@use '../generals/type-fonts.scss' as font;
 
 .header {
   display: flex;
@@ -13,6 +14,7 @@
   &__container {
     display: flex;
     width: variables.$general-width-content-sections;
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -29,11 +31,28 @@
   }
 
   &__logo-title {
-    @include fonts.fontForum;
-    font-weight: 400;
-    font-size: 28px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    color: #fff;
+    @include font.middleTextForum;
+  }
+
+  &__menu {
+    width: 100%;
+    max-width: 775px;
+    max-height: 33px;
+  }
+
+  &__menu-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__menu-item {
+    flex: 1 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__menu-link {
+    @include font.lessMiddleText(colors.$bg-light, variables.$font-weight-s, false, variables.$letter-spacing-sm);
   }
 }
