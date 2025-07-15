@@ -1,6 +1,117 @@
 @use '../generals/colors.scss';
+@use '../generals/variables.scss';
+@use '../generals/type-fonts.scss' as font;
+@use '../generals/buttons.scss';
 
 .welcome {
+  display: flex;
   height: 810px;
+  flex-direction: column;
+  align-items: center;
   background-color: colors.$bg-dark;
+
+  &__container {
+    position: relative;
+    z-index: 0;
+    width: variables.$general-width-content-sections;
+    height: inherit;
+  }
+
+  &__slider {
+    position: relative;
+    z-index: 1;
+    width: 1000px;
+    height: 755px;
+    margin-left: auto;
+    overflow-x: hidden;
+    white-space: nowrap;
+  }
+
+  &__slider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 755px;
+    background-color: #000;
+    box-shadow: 0 0 120px 110px #000;
+    pointer-events: none;
+  }
+
+  &__slider-img {
+    display: inline-block;
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 2;
+    width: 598px;
+    height: 388px;
+    top: -600px;
+  }
+
+  &__title {
+    @include font.bigText(colors.$bg-light);
+  }
+
+  &__text {
+    margin: 25px 0 75px;
+    @include font.middleText(colors.$bg-light, variables.$font-weight-xm, variables.$letter-spacing-s);
+  }
+
+  &__button {
+    padding: 24px 64px;
+    @include buttons.bigButton;
+    @include font.lessMiddleText(colors.$bg-light, variables.$font-weight-xm, false, variables.$letter-spacing-sm);
+  }
+
+  &__slider-control {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    width: 600px;
+    height: 120px;
+    margin-left: auto;
+    top: -455px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: colors.$bg-dark;
+  }
+
+  &__slider-panel {
+    width: 76px;
+    height: 40px;
+  }
+
+  &__slider-counter,
+  &__slider-count {
+    display: inline;
+    @include font.lessMiddleText(colors.$bg-light, variables.$font-weight-m, variables.$font-height-lm, false);
+    text-transform: variables.$text-transform-uppercase;
+  }
+
+  &__slider-separator {
+    padding: 0 10px;
+    @include font.lessMiddleText(colors.$bg-light, variables.$font-weight-m, variables.$font-height-lm, false);
+  }
+
+  &__slider-points {
+    display: flex;
+    width: 180px;
+    justify-content: space-between;
+  }
+
+  &__slider-point {
+    width: 16px;
+    height: 16px;
+    background-color: colors.$bg-light;
+  }
+
+  &__slider-direction {
+    display: flex;
+    width: 80px;
+    height: 8px;
+    justify-content: space-between;
+  }
 }
