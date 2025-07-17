@@ -1,6 +1,35 @@
 @use '../generals/colors.scss';
+@use '../generals/variables.scss';
+@use '../generals/type-fonts.scss' as fonts;
+@use '../components/tour-card.scss';
 
 .visiting {
-  height: 1266px;
+  padding: 75px 0;
   background-color: colors.$bg-light;
+
+  &__container {
+    width: 100%;
+    max-width: 1440px;
+    height: 1116px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    @include fonts.bigText(colors.$font-gold);
+  }
+
+  &__separator {
+    width: 100%;
+    height: 3px;
+    margin: 25px 0 75px;
+    border: none;
+    background: colors.$dark-red;
+  }
+
+  &__tour {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 75px;
+  }
 }

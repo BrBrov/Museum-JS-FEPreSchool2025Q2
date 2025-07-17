@@ -64,10 +64,24 @@
   color: colors.$bg-light;
 }
 
+@mixin lessMiddleTextThin {
+  @include fonts.fontRobotoThin;
+  font-weight: variables.$font-weight-s;
+  font-size: 22px;
+  color: colors.$bg-dark;
+}
+
 @mixin smallText {
   @include fonts.fontRoboto;
   font-weight: variables.$font-weight-m;
   font-size: 18px;
   line-height: variables.$font-height-l;
-  color: colors.$bg-light;
+  color: colors.$bg-dark;
+}
+
+@mixin smallTextThin {
+  @include fonts.fontRobotoThin;
+  font-weight: variables.$font-weight-s;
+  font-size: 18px;
+  color: colors.$bg-dark;
 }
