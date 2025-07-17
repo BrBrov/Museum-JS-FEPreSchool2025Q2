@@ -56,6 +56,14 @@
   }
 }
 
+@mixin lessMiddleTextLight {
+  @include fonts.fontRobotoLight;
+  font-weight: variables.$font-weight-xm;
+  font-size: 22px;
+  line-height: variables.$font-height-m;
+  color: colors.$bg-light;
+}
+
 @mixin smallText {
   @include fonts.fontRoboto;
   font-weight: variables.$font-weight-m;

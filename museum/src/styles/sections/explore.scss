@@ -1,6 +1,84 @@
 @use '../generals/colors.scss';
+@use '../generals/variables.scss';
+@use '../generals/type-fonts.scss' as fonts;
 
 .explore {
-  height: 865px;
+  height: 715px;
+  padding: 75px 0;
   background-color: colors.$bg-dark;
+
+  &__container {
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    height: 715px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  &__left-side {
+    width: 50%;
+    height: 100%;
+  }
+
+  &__title {
+    @include fonts.bigText(colors.$bg-light);
+  }
+
+  &__separator {
+    width: 91.4142%;
+    height: 3px;
+    margin: 25px 0 75px;
+    border: none;
+    background: colors.$dark-red;
+  }
+
+  &__text {
+    margin-bottom: 25px;
+    @include fonts.lessMiddleTextLight;
+
+    &-yellow {
+      color: colors.$font-yellow;
+    }
+  }
+
+  &__right-side {
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 50%;
+    height: 100%;
+    padding-top: 15px;
+  }
+
+  &__after {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    width: 100%;
+    height:100%;
+    background: url('../../assets/img/explore-slider/after.jpg') left no-repeat;
+  }
+
+  &__before {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+    width: 39%;
+    height: 100%;
+    margin-left: -39%;
+    background: url('../../assets/img/explore-slider/before.jpg') right no-repeat;
+  }
+
+  &__before::after {
+    content: '';
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: -16.5px;
+    width: 39px;
+    height: 100%;
+    background: url('../../assets/img/icons/Devider.svg') center/cover no-repeat;
+  }
 }
