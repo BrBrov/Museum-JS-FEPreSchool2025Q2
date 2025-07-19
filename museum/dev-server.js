@@ -4,7 +4,6 @@ import Webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
 
 import webpackConfig from './webpack.config.js';
-import { debug } from 'console';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -27,6 +26,6 @@ const server = new WebpackDevServer(configDevServer, compiler);
 async function serverStart() {
   console.log('Starting server...');
   await server.start();
-};
+}
 
 serverStart();

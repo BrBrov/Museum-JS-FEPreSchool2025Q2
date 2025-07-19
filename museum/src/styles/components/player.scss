@@ -1,0 +1,77 @@
+@use '../generals/type-fonts.scss' as fonts;
+@use '../generals/colors.scss';
+
+@mixin videoDescription {
+  &__description {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 40px;
+    top: 15px;
+    left: 10px;
+    right: 36px;
+    align-items: center;
+
+    &-img {
+      border-radius: 50%;
+    }
+
+    &-text {
+      margin-left: 10px;
+      @include fonts.smallText(colors.$bg-light);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      &:hover {
+        font-size: 18px;
+        color: colors.$bg-light;
+      }
+    }
+
+    &-dots {
+      margin-left: 23px;
+      width: 4px;
+      height: 16px;
+    }
+  }
+}
+
+.player {
+  position: relative;
+  width: 100%;
+  height: 735px;
+  @include videoDescription;
+
+  &__display {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 650px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &_description_hide {
+    display: none;
+  }
+
+  &__content-play {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border: none;
+    background: url('../../assets/img/icons/PlayButton.svg') center/cover no-repeat;
+    cursor: pointer;
+  }
+
+  &__content-play_hide {
+    display: none;
+  }
+}

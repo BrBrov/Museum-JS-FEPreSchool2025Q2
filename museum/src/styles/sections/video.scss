@@ -1,6 +1,83 @@
+@use '../components/player.scss';
+@use '../components/player-control.scss';
+@use '../components/video-slide.scss';
 @use '../generals/colors.scss';
+@use '../generals/variables';
+@use '../generals/type-fonts' as fonts;
 
 .video {
-  height: 1396px;
+  height: 1246px;
+  padding: 75px 0;
   background-color: colors.$bg-light;
+  @include player.videoDescription;
+
+  &__container {
+    width: variables.$general-width-content-sections;
+    margin: 0 auto;
+  }
+
+  &__info {
+    display: flex;
+    width: 100%;
+    height: 165px;
+
+    &-title {
+      width: 50%;
+      @include fonts.bigText(colors.$font-gold);
+    }
+
+    &-text {
+      width: 50%;
+      margin-top: 4px;
+      @include fonts.lessMiddleTextLight(colors.$dark-color-link);
+    }
+  }
+
+  &__slider {
+    width: variables.$general-width-content-sections;
+    margin: 40px auto 0 auto;
+    height: 306px;
+  }
+
+  &__slider-wrapper {
+    position: relative;
+    width: 100%;
+    height: 254px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &__slider-control {
+    display: flex;
+    width: 200px;
+    height: 12px;
+    margin: 40px auto 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__prev-slide,
+  &__next-slide {
+    width: 10px;
+    height: 12px;
+    border: none;
+    background: url('../../assets/img/icons/VideoArrow.svg') no-repeat;
+    cursor: pointer;
+  }
+
+  &__next-slide {
+    transform: rotate(180deg);
+  }
+
+  &__slide-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: colors.$slider-dot;
+    cursor: pointer;
+  }
+
+  .slide-dot_marked {
+    background-color: colors.$slider-dot-marked;
+  }
 }

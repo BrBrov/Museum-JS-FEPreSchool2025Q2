@@ -9,8 +9,7 @@
 
   &__container {
     display: flex;
-    width: 100%;
-    max-width: 1440px;
+    width: variables.$general-width-content-sections;
     height: 715px;
     margin: 0 auto;
     justify-content: center;
@@ -35,7 +34,7 @@
 
   &__text {
     margin-bottom: 25px;
-    @include fonts.lessMiddleTextLight;
+    @include fonts.lessMiddleTextLight(colors.$bg-light);
 
     &-yellow {
       color: colors.$font-yellow;

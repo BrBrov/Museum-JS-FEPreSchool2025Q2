@@ -8,8 +8,7 @@
   background-color: colors.$bg-light;
 
   &__container {
-    width: 100%;
-    max-width: 1440px;
+    width: variables.$general-width-content-sections;
     height: 1116px;
     margin: 0 auto;
   }

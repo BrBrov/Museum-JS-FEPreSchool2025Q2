@@ -1,0 +1,69 @@
+@use '../generals/colors.scss';
+
+.player {
+  &__control {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 25px 0 30px;
+    height: 85px;
+    align-items: center;
+    gap: 50px;
+    background: colors.$bg-dark;
+  }
+
+  &__play {
+    width: 23px;
+    height: 31px;
+  }
+
+  &__position {
+    width: 67.077%;
+  }
+
+  &__volume {
+    width: 38px;
+    height: 31px;
+  }
+
+  &__sound {
+    width: 11.192%;
+  }
+
+  &__sound,
+  &__position {
+    appearance: none;
+    height: 16px;
+    overflow: hidden;
+    background: colors.$dark-color-link;
+
+    &::-webkit-slider-runnable-track {
+      height: 8px;
+      border-radius: unset;
+      background: colors.$track-background;
+    }
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      margin-top: -4px;
+      border-radius: 50%;
+      background: colors.$bg-light;
+      border-image: linear-gradient(90deg, colors.$dark-red 50%, colors.$track-background 0) 0 1 / calc(50% - 4px) 100vw/0 100vw;
+      cursor: pointer;
+    }
+  }
+
+  &__fullscreen {
+    width: 35px;
+    height: 35px;
+  }
+
+  &__play,
+  &__volume,
+  &__fullscreen {
+    cursor: pointer;
+  }
+}

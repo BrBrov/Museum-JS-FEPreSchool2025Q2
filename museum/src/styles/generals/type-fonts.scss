@@ -56,12 +56,12 @@
   }
 }
 
-@mixin lessMiddleTextLight {
+@mixin lessMiddleTextLight($color-text) {
   @include fonts.fontRobotoLight;
   font-weight: variables.$font-weight-xm;
   font-size: 22px;
   line-height: variables.$font-height-m;
-  color: colors.$bg-light;
+  color: $color-text;
 }
 
 @mixin lessMiddleTextThin {
@@ -71,12 +71,16 @@
   color: colors.$bg-dark;
 }
 
-@mixin smallText {
+@mixin smallText($color-text) {
   @include fonts.fontRoboto;
   font-weight: variables.$font-weight-m;
   font-size: 18px;
   line-height: variables.$font-height-l;
-  color: colors.$bg-dark;
+  @if ($color-text) {
+    color: $color-text;
+  } @else {
+    color: colors.$bg-dark;
+  }
 }
 
 @mixin smallTextThin {
