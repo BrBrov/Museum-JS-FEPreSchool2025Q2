@@ -1,6 +1,145 @@
 @use '../generals/colors.scss';
+@use '../generals/variables.scss';
+@use '../generals/type-fonts.scss' as fonts;
+@use '../generals/buttons.scss';
 
 .tickets {
   height: 893px;
   background-color: colors.$bg-light;
+
+  &__container {
+    width: variables.$general-width-content-sections;
+    height: 743px;
+    margin: 75px auto;
+  }
+
+  &__title {
+    @include fonts.bigText(colors.$font-gold);
+  }
+
+  &__separator {
+    width: variables.$general-width-sections;
+    height: 3px;
+    margin: 25px 0 75px 0;
+    border: none;
+    background-color: colors.$dark-red;
+  }
+
+  &__wrapper {
+    display: flex;
+    width: variables.$general-width-sections;
+    justify-content: space-between;
+  }
+
+  &__image {
+    width: 750px;
+  }
+
+  &__block {
+    display: flex;
+    width: calc(100% - 750px - 60px);
+    justify-content: space-between;
+  }
+
+  &__type,
+  &__amount {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__type-title,
+  &__amount-title {
+    margin-bottom: 50px;
+    @include fonts.middleTextRobotoBold(false);
+  }
+
+  &__amount-title {
+    align-self: flex-end;
+  }
+
+  &__type-wrapper {
+    display: flex;
+    margin-bottom: 25px;
+    align-items: center;
+    gap: 23px;
+  }
+
+  &__type-check {
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    margin: 0;
+    border: solid 2px colors.$dark-color-link;
+    border-radius: 50%;
+
+    &:checked {
+      margin: 0;
+      background: url("data:image/svg+xml,%3Csvg%20width%3D%277%27%20height%3D%277%27%20viewBox%3D%270%200%207%207%27%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%223.5%22%20cy%3D%223.5%22%20r%3D%223.5%22%20fill%3D%22black%22/%3E%3C/svg%3E") center/7px no-repeat;
+    }
+  }
+
+  &__type-label,
+  &__amount-label {
+    @include fonts.lessMiddleTextLight(colors.$dark-color-link, false);
+  }
+
+  &__amount-wrapper {
+    display: flex;
+    margin-left: auto;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__amount-block {
+    display: flex;
+    box-sizing: border-box;
+    max-width: 150px;
+    height: 50px;
+    margin-bottom: 10px;
+    padding: 0 14px;
+    border: 3px solid colors.$dark-color-link;
+  }
+
+  &__amount-minus,
+  &__amount-plus {
+    width: 19px;
+    border: none;
+    background-color: colors.$bg-light;
+    @include fonts.bigLessText;
+    cursor: pointer;
+  }
+
+  &__amount-counter {
+    appearance: textfield;
+    max-width: 79px;
+    padding: 0;
+    border: none;
+    text-align: center;
+    @include fonts.lessMiddleTextLight(colors.$dark-color-link, false);
+    outline: none;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__amount-count {
+    margin-top: 40px;
+    @include fonts.middleTextRobotoBold(true);
+  }
+
+  &__amount-buy {
+    height: 50px;
+    margin-top: 52px;
+    border: none;
+    @include buttons.smallButton;
+    @include fonts.lessMiddleTextLight(colors.$bg-light, false);
+    letter-spacing: variables.$letter-spacing-sm;
+  }
 }

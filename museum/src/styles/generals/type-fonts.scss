@@ -32,6 +32,17 @@
   }
 }
 
+@mixin middleTextRobotoBold($is-letter-spacing) {
+  @include fonts.fontRobotoBold;
+  font-weight: variables.$font-weight-l;
+  font-size: 28px;
+  color: colors.$dark-color-link;
+
+  @if ($is-letter-spacing) {
+    letter-spacing: variables.$letter-spacing-xs;
+  }
+}
+
 @mixin middleTextForum {
   @include fonts.fontForum;
   font-weight: variables.$font-weight-m;
@@ -56,11 +67,15 @@
   }
 }
 
-@mixin lessMiddleTextLight($color-text) {
+@mixin lessMiddleTextLight($color-text, $is-line-height) {
   @include fonts.fontRobotoLight;
   font-weight: variables.$font-weight-xm;
   font-size: 22px;
-  line-height: variables.$font-height-m;
+
+  @if ($is-line-height) {
+    line-height: variables.$font-height-m;
+  }
+
   color: $color-text;
 }
 
@@ -76,9 +91,12 @@
   font-weight: variables.$font-weight-m;
   font-size: 18px;
   line-height: variables.$font-height-l;
+
   @if ($color-text) {
     color: $color-text;
-  } @else {
+  }
+
+  @else {
     color: colors.$bg-dark;
   }
 }

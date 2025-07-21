@@ -34,7 +34,7 @@
 
   &__text {
     margin-bottom: 25px;
-    @include fonts.lessMiddleTextLight(colors.$bg-light);
+    @include fonts.lessMiddleTextLight(colors.$bg-light, true);
 
     &-yellow {
       color: colors.$font-yellow;
