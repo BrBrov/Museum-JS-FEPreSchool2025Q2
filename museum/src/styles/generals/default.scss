@@ -28,13 +28,11 @@ a {
 
   &:hover {
     font-size: 24px;
-    color: colors.$hover-color-link;
     transition: all 0.2s linear;
   }
 
   &:active {
     font-size: 20px;
-    color: colors.$hover-color-link;
     transition: font-size 0.1s linear;
   }
 }

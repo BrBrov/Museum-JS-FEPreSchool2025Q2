@@ -1,6 +1,7 @@
 @use '../generals/colors.scss';
 @use '../generals/variables.scss';
 @use '../generals/type-fonts.scss' as fonts;
+@use '../generals//separator.scss';
 @use '../components/tour-card.scss';
 
 .visiting {
@@ -18,11 +19,7 @@
   }
 
   &__separator {
-    width: 100%;
-    height: 3px;
-    margin: 25px 0 75px;
-    border: none;
-    background: colors.$dark-red;
+    @include separator.separatorSection;
   }
 
   &__tour {

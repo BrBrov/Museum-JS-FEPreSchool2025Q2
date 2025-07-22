@@ -52,6 +52,13 @@
   color: colors.$bg-light;
 }
 
+@mixin middleTextRobotoMedium {
+  @include fonts.fontRobotoMedium;
+  font-weight: variables.$font-weight-lm;
+  font-size: 28px;
+  color: colors.$dark-color-link;
+}
+
 @mixin lessMiddleText($color-text, $weight-text, $height-text, $text-spacing) {
   @include fonts.fontRoboto;
   font-size: 22px;

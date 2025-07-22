@@ -2,6 +2,7 @@
 @use '../generals/variables.scss';
 @use '../generals/type-fonts.scss' as fonts;
 @use '../generals/buttons.scss';
+@use '../generals/separator.scss';
 
 .tickets {
   height: 893px;
@@ -18,11 +19,7 @@
   }
 
   &__separator {
-    width: variables.$general-width-sections;
-    height: 3px;
-    margin: 25px 0 75px 0;
-    border: none;
-    background-color: colors.$dark-red;
+    @include separator.separatorSection;
   }
 
   &__wrapper {

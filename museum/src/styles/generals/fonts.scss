@@ -23,6 +23,11 @@
   src: url('../../assets/fonts/Roboto-Bold.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Roboto Medium';
+  src: url('../../assets/fonts/Roboto-Medium.ttf') format('truetype');
+}
+
 @mixin fontForum {
   font-family: 'Forum', sans-serif;
 }
@@ -41,4 +46,8 @@
 
 @mixin fontRobotoBold {
   font-family: 'Roboto Bold', sans-serif;
+}
+
+@mixin fontRobotoMedium {
+  font-family: 'Roboto Medium', sans-serif;
 }

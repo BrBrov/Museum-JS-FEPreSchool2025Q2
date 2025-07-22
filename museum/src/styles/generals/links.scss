@@ -1,15 +1,6 @@
-@use './fonts.scss';
 @use './colors.scss';
 
-@mixin linksText {
-  @include fonts.fontRoboto;
-  font-weight: 400;
-  font-size: 22px;
-  letter-spacing: 0.03em;
-}
-
 @mixin darkLinks {
-  @include linksText;
   color: colors.$dark-color-link;
 
   &:hover {
@@ -22,7 +13,6 @@
 }
 
 @mixin lightLinks {
-  @include linksText;
   color: colors.$light-color-link;
 
   &:hover {
