@@ -93,6 +93,13 @@
   color: colors.$bg-dark;
 }
 
+@mixin lessMiddleTextThinNotColor {
+  @include fonts.fontRobotoThin;
+  font-weight: variables.$font-weight-sm;
+  font-size: 22px;
+  letter-spacing: variables.$letter-spacing-sm;
+}
+
 @mixin smallText($color-text) {
   @include fonts.fontRoboto;
   font-weight: variables.$font-weight-m;

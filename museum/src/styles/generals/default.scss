@@ -25,14 +25,17 @@ li {
 
 a {
   text-decoration: none;
+  color: unset;
 
   &:hover {
     font-size: 24px;
+    color: unset;
     transition: all 0.2s linear;
   }
 
   &:active {
     font-size: 20px;
+    color: unset;
     transition: font-size 0.1s linear;
   }
 }

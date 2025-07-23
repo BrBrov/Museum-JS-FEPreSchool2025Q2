@@ -1,8 +1,80 @@
+@use '../components/logo.scss';
+@use '../components/social.scss';
 @use '../generals/variables.scss';
 @use '../generals/colors.scss';
+@use '../generals/type-fonts.scss' as fonts;
+@use '../generals/links.scss';
 
 .footer {
   width: variables.$general-width-sections;
-  height: 392px;
   background: colors.$bg-dark;
+  @include logo.logo;
+
+  &__container {
+    display: flex;
+    width: variables.$general-width-content-sections;
+    height: 128px;
+    margin: 0 auto;
+    padding: 87px 0 50px;
+    justify-content: space-between;
+  }
+
+  &__separator {
+    width: variables.$general-width-sections;
+    height: 3px;
+    border: none;
+    background-color: colors.$footer-separator;
+  }
+
+  &__bottom {
+    width: variables.$general-width-content-sections;
+    height: 124px;
+  }
+
+  &__block {
+    display: flex;
+    width: 76.389%;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    width: 363px;
+
+    &-list {
+      display: flex;
+      height: 128px;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      column-gap: 150px;
+      row-gap: 25px;
+    }
+
+    &-item {
+      width: 106.5px;
+      height: 26px;
+    }
+
+    &-link {
+      @include fonts.lessMiddleTextThinNotColor;
+      @include links.lightLinks;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    width: variables.$general-width-content-sections;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__year,
+  &__school,
+  &__author {
+    @include fonts.lessMiddleTextThinNotColor;
+    color: colors.$bg-light;
+    font-weight: variables.$font-weight-s;
+    line-height: variables.$font-height-sx;
+  }
 }

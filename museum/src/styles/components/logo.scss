@@ -1,0 +1,19 @@
+@use '../generals/type-fonts.scss' as font;
+
+@mixin logo {
+    &__logo {
+    display: flex;
+    width: 199px;
+    height: 33px;
+    justify-content: space-between;
+
+    &-img {
+      width: 49px;
+      height: 26px;
+    }
+
+    &-title {
+      @include font.middleTextForum;
+    }
+  }
+}

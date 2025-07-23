@@ -1,3 +1,4 @@
+@use '../components/logo.scss';
 @use '../generals/variables.scss';
 @use '../generals/colors.scss';
 @use '../generals/fonts.scss';
@@ -10,28 +11,13 @@
   justify-content: center;
   align-items: center;
   background-color: colors.$bg-dark;
+  @include logo.logo;
 
   &__container {
     display: flex;
     width: variables.$general-width-content-sections;
     justify-content: space-between;
     align-items: center;
-  }
-
-  &__logo {
-    display: flex;
-    width: 199px;
-    height: 33px;
-    justify-content: space-between;
-  }
-
-  &__logo-img {
-    width: 49px;
-    height: 26px;
-  }
-
-  &__logo-title {
-    @include font.middleTextForum;
   }
 
   &__menu {
