@@ -40,5 +40,9 @@
 
   &__menu-link {
     @include font.lessMiddleText(colors.$bg-light, variables.$font-weight-s, false, variables.$letter-spacing-sm);
+
+    &:hover {
+      color: colors.$hover-color-link;
+    }
   }
 }

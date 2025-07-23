@@ -68,6 +68,7 @@
     margin: 0;
     border: solid 2px colors.$dark-color-link;
     border-radius: 50%;
+    cursor: pointer;
 
     &:checked {
       margin: 0;
@@ -138,5 +139,6 @@
     @include buttons.smallButton;
     @include fonts.lessMiddleTextLight(colors.$bg-light, false);
     letter-spacing: variables.$letter-spacing-sm;
+    cursor: pointer;
   }
 }

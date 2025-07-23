@@ -6,6 +6,12 @@
   display: flex;
   height: 424px;
   flex-direction: column;
+  cursor: pointer;
+
+  &:hover .card__separator{
+    width: 100%;
+    transition: all 0.5s linear;
+  }
 
   &__title {
     margin: 25px 0 10px;
@@ -19,6 +25,7 @@
     padding: 0;
     border: none;
     background-color: colors.$dark-red;
+    transition: all 0.5s linear;
   }
 
   &__text {
