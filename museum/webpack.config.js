@@ -18,32 +18,58 @@ const defaultConfig = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: './'
   },
   module: {
     rules: [
       {
+        test: /\.html$/,
+        loader: 'html-loader',
+        options: {
+          sources: {
+            list: [
+              '...',
+              { tag: 'img', attribute: 'src', type: 'src' },
+              { tag: 'link', attribute: 'href', type: 'src' },
+              { tag: 'video', attribute: 'poster', type: 'src' },
+              { tag: 'source', attribute: 'src', type: 'src' }
+            ]
+          }
+        }
+      },
+      {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
         generator: {
-          filename: '[name][ext]'
+          filename: 'assets/img/[name][ext]'
         }
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: 'asset/resource'
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[name][ext]'
+        }
+      },
+      {
+        test: /\.(mp4)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/video/[name][ext]'
+        }
       },
     ]
   },
-plugins: [
-  new HtmlWebpackPlugin({
-    favicon: './src/assets/favicon.ico',
-    template: './src/index.html',
-  })
-],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+      favicon: './src/assets/favicon.ico'
+    })
+  ],
   performance: {
-  hints: false,
+    hints: false,
     maxAssetSize: 500000, // 500 KiB
-      maxEntrypointSize: 500000, // 500 KiB
+    maxEntrypointSize: 500000, // 500 KiB
   },
 };
 
