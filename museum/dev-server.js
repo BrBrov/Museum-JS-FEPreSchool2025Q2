@@ -9,14 +9,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const configDevServer = {
-    static: {
-      directory: path.join(__dirname, 'src/assets'),
-      publicPath: '/assets/',
-    },
-    compress: false,
-    port: 3000,
-    watchFiles: ['src/**/*'],
-    open: true
+  compress: false,
+  port: 3000,
+  watchFiles: ['src/**/*'],
+  open: true,
+  devMiddleware: {
+    publicPath: '/'
+  }
 };
 
 const compiler = Webpack(webpackConfig);
