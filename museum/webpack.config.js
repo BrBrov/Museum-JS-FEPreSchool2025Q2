@@ -38,7 +38,7 @@ const defaultConfig = {
         }
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(svg|jpg|jpeg|webp)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'assets/img/[name][ext]'
