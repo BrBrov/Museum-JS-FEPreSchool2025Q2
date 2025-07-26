@@ -31,11 +31,19 @@ a {
     font-size: 24px;
     color: unset;
     transition: all 0.2s linear;
+
+    @media (max-width: 1024px) {
+      font-size: 21px;
+    }
   }
 
   &:active {
     font-size: 20px;
     color: unset;
     transition: font-size 0.1s linear;
+
+    @media (max-width: 1024px) {
+      font-size: 20px;
+    }
   }
 }

@@ -1,4 +1,5 @@
 @use '../generals/type-fonts.scss' as font;
+@use '../generals/variables.scss';
 
 @mixin logo {
     &__logo {
@@ -7,13 +8,36 @@
     height: 33px;
     justify-content: space-between;
 
+      @media (max-width: 1024px) {
+        height: 41px;
+        align-items: baseline;
+
+        @media (max-width: 420px) {
+          width: 131px;
+          height: 20px;
+        }
+      }
+
     &-img {
       width: 49px;
       height: 26px;
+      
+      @media (max-width: 420px) {
+        width: 29px;
+        height: 16px;
+      }
     }
 
     &-title {
       @include font.middleTextForum;
+      
+      @media (max-width: 1024px) {
+        line-height: variables.$font-height-md;
+      }
+
+      @media (max-width: 420px) {
+        @include font.smallTextForum;
+      }
     }
   }
 }

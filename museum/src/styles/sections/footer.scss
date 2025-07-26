@@ -9,6 +9,7 @@
   width: variables.$general-width-sections;
   background: colors.$bg-dark;
   @include logo.logo;
+  @include social.socialLinks;
 
   &__container {
     display: flex;
